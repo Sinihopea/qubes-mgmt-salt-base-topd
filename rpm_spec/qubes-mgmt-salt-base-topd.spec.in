@@ -1,24 +1,23 @@
 
-Name:      qubes-mgmt-salt-base-topd
-Version:   @VERSION@
-Release:   1%{?dist}
-Summary:   Salt top module plugin that allows top drop-ins
-License:   GPL 2.0
-URL:	   http://www.qubes-os.org/
+Name:           qubes-mgmt-salt-base-topd
+Version:        @VERSION@
+Release:        1%{?dist}
+Summary:        Salt top module plugin that allows top drop-ins
+License:        GPL 2.0
+URL:            http://www.qubes-os.org/
 
-Group:     System administration tools
-BuildArch: noarch
-Requires:  salt
-Requires:  salt-minion
-Requires:  qubes-mgmt-salt-config >= 4.1.0
+Group:          System administration tools
+BuildArch:      noarch
+Requires:       salt
+Requires:       salt-minion
+Requires:       qubes-mgmt-salt-config >= 4.1.0
 %if 0%{?fedora} == 25
-Requires:  qubes-mgmt-salt-base-overrides
-Requires:  qubes-mgmt-salt-base-overrides-libs
+Requires:       qubes-mgmt-salt-base-overrides
+Requires:       qubes-mgmt-salt-base-overrides-libs
 %endif
 Requires(post): /usr/bin/salt-call
 
-
-Source0: %{name}-%{version}.tar.gz
+Source0:        %{name}-%{version}.tar.gz
 
 %description
 Salt top module plugin that allows top drop-ins
